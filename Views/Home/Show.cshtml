@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Trail Description";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<div class="container">
+    <h1>@ViewBag.dog.trail_name</h1>
+    <h3>Description</h3>
+    <p>@ViewBag.dog.descript</p>
+    <h3>Trail Length</h3>
+    <p>@ViewBag.dog.length</p>
+    <h3>Elevation Change</h3>
+    <p>@ViewBag.dog.elev_change</p>
+    <h3>Longitude</h3>
+    <p>@ViewBag.dog.lon</p>
+    <h3>Latitude</h3>
+    <p>@ViewBag.dog.lat</p>
+</div>

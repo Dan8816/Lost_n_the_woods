@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Add New Trail";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+@model lost.Models.Trail
+
+<table>
+    <form class="form" asp-action="create" asp-controller="Home" method="post">
+        <tr>
+            <td><label asp-for="trail_name">Trail Name:</label></td>
+            <td><input asp-for="trail_name" type="text" name="trail_name"></td>
+            <td><span asp-validation-for="trail_name"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="descript">Description:</label></td>
+            <td><textarea name="descript" cols="50" rows="5"></textarea></td>
+            <td><span asp-validation-for="descript"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="length">Trail Length:</label></td>
+            <td><input asp-for="length" type="text" name="length">Km</td>
+            <td><span asp-validation-for="length"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="elev_change">Elevation Change:</label></td>
+            <td><input asp-for="elev_change" type="text" name="elev_change">Meters</td>
+            <td><span asp-validation-for="elev_change"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="lon">Longitude:</label></td>
+            <td><input asp-for="lon" type="text" name="lon"></td>
+            <td><span asp-validation-for="lon"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="lat">Latitude:</label></td>
+            <td><input asp-for="lat" type="text" name="lat"></td>
+            <td><span asp-validation-for="lat"></span></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-success">Add Trail</button></td>
+        </tr>
+    </form>
+</table>
